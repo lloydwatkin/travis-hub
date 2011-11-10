@@ -86,7 +86,7 @@ module Travis
         timing = Benchmark.realtime do
           ActiveRecord::Base.cache { yield }
         end
-        log notice("Completed in #{timing.round} seconds")
+        log notice("Completed in #{timing.to_s[0..4]} seconds")
       end
 
       def decode(payload)
