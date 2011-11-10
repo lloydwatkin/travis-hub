@@ -54,12 +54,11 @@
                         </goals>
                         <configuration>
                             <environmentVariables>
-                                <key>APPDIR</key> 
-                                <value>/app/tmp/repo.git/.cache</value>
+                                <REPO>/app/tmp/repo.git/.cache</REPO>
                             </environmentVariables>
                             <executable>script/jruby</executable>
                             <arguments>
-                                <argument>-S bundle install --gemfile=JemfileTest</argument>
+                                <argument>-S bundle install --gemfile=Jemfile</argument>
                             </arguments>
                         </configuration>
                     </execution>
