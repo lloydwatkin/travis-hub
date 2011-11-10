@@ -74,9 +74,9 @@ module Travis
       def handler_for(event, payload)
         case event.to_s
         when /^job/
-          Travis::Handler::Job.new(event, payload)
+          Handler::Job.new(event, payload)
         when /^worker/
-          Travis::Handler::Worker.new(event, payload)
+          Handler::Worker.new(event, payload)
         else
           raise "Unknown message type: #{event.inspect}"
         end
