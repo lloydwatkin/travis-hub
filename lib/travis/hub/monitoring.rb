@@ -16,6 +16,7 @@ module Travis
           add_transaction_tracer(:handle)
         end
 
+        require 'travis/notifications'
         Travis::Notifications::Pusher.class_eval do
           include NewRelic::Agent::Instrumentation::ControllerInstrumentation
           add_transaction_tracer(:notify, :category => :task)
