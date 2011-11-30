@@ -18,12 +18,12 @@ module Travis
 
         require 'travis/notifications'
         ['Pusher', 'Email', 'Irc', 'Campfire', 'Webhook'].each do |service|
-          module Travis::Notifications
-            service.class_eval do
+          eval <<-RUBY
+            Travis::Notifications::#{service}.class_eval do
               include NewRelic::Agent::Instrumentation::ControllerInstrumentation
               add_transaction_tracer(:notify, :category => :task)
             end
-          end
+          RUBY
         end
 
 
