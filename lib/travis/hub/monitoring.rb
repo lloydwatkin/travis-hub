@@ -16,6 +16,11 @@ module Travis
           add_transaction_tracer(:handle)
         end
 
+        Travis::Notifications::Pusher.class_eval do
+          include NewRelic::Agent::Instrumentation::ControllerInstrumentation
+          add_transaction_tracer(:notify, :category => :task)
+        end
+
         NewRelic::Agent.manual_start(:env => ENV['ENV'])
       rescue Exception => e
         puts 'New Relic Agent refused to start!'
