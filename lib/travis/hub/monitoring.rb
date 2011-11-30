@@ -7,14 +7,12 @@ module Travis
 
         Travis::Hub::Handler::Job.class_eval do
           include NewRelic::Agent::Instrumentation::ControllerInstrumentation
-
           add_transaction_tracer(:handle_log_update)
-          add_transaction_tracer(:handle_log_update)
+          add_transaction_tracer(:handle_update)
         end
 
         Travis::Hub::Handler::Worker.class_eval do
           include NewRelic::Agent::Instrumentation::ControllerInstrumentation
-
           add_transaction_tracer(:handle)
         end
 
