@@ -17,10 +17,15 @@ module Travis
         end
 
         require 'travis/notifications'
-        Travis::Notifications::Pusher.class_eval do
-          include NewRelic::Agent::Instrumentation::ControllerInstrumentation
-          add_transaction_tracer(:notify, :category => :task)
+        ['Pusher', 'Email', 'Irc', 'Campfire', 'Webhook'].each do |service|
+          Travis::Notifications
+            service.class_eval do
+              include NewRelic::Agent::Instrumentation::ControllerInstrumentation
+              add_transaction_tracer(:notify, :category => :task)
+            end
+          end
         end
+
 
         NewRelic::Agent.manual_start(:env => ENV['ENV'])
       rescue Exception => e
