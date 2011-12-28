@@ -21,7 +21,8 @@ GIT
 
 GIT
   remote: git://github.com/travis-ci/travis-support.git
-  revision: 810d87ee8c45a7b5da68f46a626a6381d16c2e47
+  revision: b774c86263ff4d68bf889e675c29c6b641eb93b4
+  branch: async-logging
   specs:
     travis-support (0.0.1)
 
