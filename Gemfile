@@ -1,7 +1,7 @@
 source :rubygems
 
-gem 'travis-core',        :git => "git://github.com/travis-ci/travis-core", :require => 'travis/engine', :branch => 'sven'
-gem 'travis-support',     :git => "git://github.com/travis-ci/travis-support", :branch => 'sven'
+gem 'travis-core',        :git => "git://github.com/travis-ci/travis-core", :require => 'travis/engine'
+gem 'travis-support',     :git => "git://github.com/travis-ci/travis-support"
 
 gem 'gh'
 gem 'metriks',            :git => 'git://github.com/mattmatt/metriks.git', :ref => 'source'
