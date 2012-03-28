@@ -23,7 +23,8 @@ GIT
 
 GIT
   remote: git://github.com/travis-ci/travis-core
-  revision: 6bb867e5cff47d5adbc559157cec262a2acda2dd
+  revision: 8222c8c88a534b390ed767dde85caca1ca45ae01
+  branch: sven
   specs:
     travis-core (0.0.1)
       actionmailer (~> 3.2.1)
@@ -46,6 +47,7 @@ GIT
 GIT
   remote: git://github.com/travis-ci/travis-support
   revision: 6023cb08b40d334804c06702293e7c74e0adf4d4
+  branch: sven
   specs:
     travis-support (0.0.1)
 
@@ -85,6 +87,7 @@ GEM
     atomic (1.0.0)
     atomic (1.0.0-java)
     backports (2.5.0)
+    bcrypt-ruby (3.0.1)
     bcrypt-ruby (3.0.1-java)
     bouncy-castle-java (1.5.0146.1)
     builder (3.0.0)
@@ -120,8 +123,8 @@ GEM
     journey (1.0.3)
     jruby-openssl (0.7.6.1)
       bouncy-castle-java (>= 1.5.0146.1)
-    json (1.6.5)
-    json (1.6.5-java)
+    json (1.6.6)
+    json (1.6.6-java)
     mail (2.4.4)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
@@ -219,6 +222,7 @@ GEM
 
 PLATFORMS
   java
+  ruby
 
 DEPENDENCIES
   activerecord-jdbc-adapter (= 1.2.2)
