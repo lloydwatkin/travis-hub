@@ -1,6 +1,6 @@
 source :rubygems
 
-gem 'travis-core',        :git => 'git://github.com/travis-ci/travis-core'
+gem 'travis-core',        :git => 'git://github.com/travis-ci/travis-core', :branch => 'pr-testing-for-all'
 gem 'travis-support',     :git => 'git://github.com/travis-ci/travis-support'
 
 gem 'gh',                 :git => 'git://github.com/rkh/gh'
