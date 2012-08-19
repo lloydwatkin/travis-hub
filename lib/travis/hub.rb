@@ -3,7 +3,6 @@ require 'benchmark'
 require 'active_support/core_ext/float/rounding'
 require 'core_ext/kernel/run_periodically'
 require 'core_ext/hash/compact'
-require 'core_ext/module/with'
 
 require 'travis'
 require 'travis/support'
@@ -22,6 +21,7 @@ module Travis
       def start
         setup
         prune_workers
+        enqueue_jobs
         new.subscribe
       end
 
@@ -48,9 +48,13 @@ module Travis
           run_periodically(Travis.config.workers.prune.interval, &::Worker.method(:prune))
         end
 
-        def cleanup_jobs
-          run_periodically(Travis.config.jobs.retry.interval, &::Job.method(:cleanup))
+        def enqueue_jobs
+          run_periodically(Travis.config.jobs.queue.interval) { Job::Queueing::All.new.run }
         end
+
+        # def cleanup_jobs
+        #   run_periodically(Travis.config.jobs.retry.interval, &::Job.method(:cleanup))
+        # end
     end
 
     def subscribe
