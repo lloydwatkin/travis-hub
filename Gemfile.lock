@@ -31,9 +31,11 @@ GIT
 
 GIT
   remote: git://github.com/roidrage/hubble
-  revision: 5220415d5542a2868d54f7be9f35fc1d66126b8e
+  revision: 8972b940a4f927927d2a4bdb250b3c98c04692a6
+  branch: faraday_day
   specs:
     hubble (0.1.2)
+      faraday
       json (~> 1.6.5)
 
 GIT
