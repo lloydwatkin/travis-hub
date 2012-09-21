@@ -3,7 +3,7 @@ source :rubygems
 ruby "1.9.3", :engine => "jruby", :engine_version => "1.7.0.preview2"
 
 gem 'travis-core',        :git => 'git://github.com/travis-ci/travis-core'
-gem 'travis-support',     :git => 'git://github.com/travis-ci/travis-support'
+gem 'travis-support',     :git => 'git://github.com/travis-ci/travis-support', :branch => 'hubble_on_faraday'
 
 gem 'gh',                 :git => 'git://github.com/rkh/gh'
 gem 'hubble',             :git => 'git://github.com/roidrage/hubble'

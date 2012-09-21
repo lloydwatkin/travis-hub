@@ -59,7 +59,8 @@ GIT
 
 GIT
   remote: git://github.com/travis-ci/travis-support
-  revision: 268dc0ff74b5a559e06f637e0814af983e60919e
+  revision: 0d2f81cfc1d753fccbf79e9d8a4c87d62d462b6d
+  branch: hubble_on_faraday
   specs:
     travis-support (0.0.1)
 
