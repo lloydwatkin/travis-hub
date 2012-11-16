@@ -39,7 +39,8 @@ GIT
 
 GIT
   remote: git://github.com/travis-ci/travis-core.git
-  revision: 657d6e2380734140fb3f5a08b5f6363ba35002bc
+  revision: c24ec9b242a67262ba90d15b9ee1876de22485b6
+  ref: mm-save-request-forcefully
   specs:
     travis-core (0.0.1)
       actionmailer (~> 3.2.3)
@@ -171,10 +172,6 @@ GEM
       actionmailer
       postmark (>= 0.9.0)
       rake
-    pry (0.9.10)
-      coderay (~> 1.0.5)
-      method_source (~> 0.8)
-      slop (~> 3.3.1)
     pry (0.9.10-java)
       coderay (~> 1.0.5)
       method_source (~> 0.8)
